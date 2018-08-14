@@ -25,7 +25,7 @@ if ($WinFeatures | Where-Object { $_.Name.Trim() -like "SNMP*" }) {
     Write-Host "SNMP service already installed."
 } else {
     Write-Host "Enabling the SNMP service."
-    $ dism.exe /Online /Enable-Feature /FeatureName:SNMP
+    & dism.exe /Online /Enable-Feature /FeatureName:SNMP
 }
 
 Write-Host "Configuring SNMP Services..."
